@@ -21,7 +21,7 @@ public class Pedido {
 
         double totalProdutos = 0.0;
 
-        System.out.println("RESUMO PEDIDO");
+        System.out.println("------- RESUMO PEDIDO -------");
         for (ItemPedido item : itens) {
             Produto produto = item.getProduto();
             String tipo = produto instanceof produtos.Livro ? "Livro" :
@@ -39,11 +39,11 @@ public class Pedido {
         }
         double valorDesconto = totalProdutos * (percentualDesconto / 100.0);
         double totalPedido = totalProdutos - valorDesconto;
-
-        System.out.printf("DECONTO: %.2f%n", valorDesconto);
+        System.out.println("----------------------------");
+        System.out.printf("DESCONTO: %.2f%n", valorDesconto);
         System.out.printf("TOTAL PRODUTOS: %.2f%n", totalProdutos);
-        System.out.println("---------");
+        System.out.println("----------------------------");
         System.out.printf("TOTAL PEDIDO: %.2f%n", totalPedido);
-        System.out.println("---------");
+        System.out.println("----------------------------");
     }
 }
