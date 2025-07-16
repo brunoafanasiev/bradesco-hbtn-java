@@ -25,7 +25,7 @@ public class Pedido {
         for (ItemPedido item : itens) {
             Produto produto = item.getProduto();
             String tipo = produto instanceof produtos.Livro ? "Livro" :
-                    produto instanceof produtos.Dvd ? "DvD" : "Produto";
+                    produto instanceof produtos.Dvd ? "Dvd" : "Produto";
 
             String titulo = produto.getTitulo();
             double precoUnitario = produto.obterPrecoLiquido();
