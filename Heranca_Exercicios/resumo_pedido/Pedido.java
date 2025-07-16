@@ -35,7 +35,7 @@ public class Pedido {
 
             totalProdutos += totalItem;
 
-            System.out.printf("Tipo: %s  Titulo: %s  Preco: %.2fn  Quant: %d  Total: %.2f%n",
+            System.out.printf("Tipo: %s  Titulo: %s  Preco: %.2f  Quant: %d  Total: %.2f%n",
                     tipo, titulo, precoUnitario, quantidade, totalItem);
         }
         System.out.println("----------------------------");
