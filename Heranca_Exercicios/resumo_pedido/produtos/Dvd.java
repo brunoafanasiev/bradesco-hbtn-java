@@ -17,4 +17,8 @@ public class Dvd extends Produto {
         return precoBruto * 1.20;
     }
 
+    public String getDiretor() {
+        return diretor;
+    }
+
 }

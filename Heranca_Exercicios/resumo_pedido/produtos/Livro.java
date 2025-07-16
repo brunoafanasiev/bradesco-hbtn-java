@@ -12,6 +12,10 @@ public class Livro extends Produto {
         this.edicao = edicao;
     }
 
+    public String getAutor() {
+        return autor;
+    }
+
     @Override
     public double obterPrecoLiquido() {
         return precoBruto * 1.15;
