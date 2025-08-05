@@ -9,7 +9,7 @@ public class CsvFileReader {
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             String linha;
 
-            String labelNome = null;
+            String labelNome = "Funcionário";
             String labelIdade = null;
             String labelDepto = null;
             String labelSalario = null;
@@ -18,25 +18,24 @@ public class CsvFileReader {
 
                String[] dados = linha.split(",");
 
-                if (labelNome == null) {
-                    labelNome = dados[0];
+                if (labelIdade == null) {
                     labelIdade = dados[1];
                     labelDepto = dados[2];
                     labelSalario = dados[3];
                 }
 
-                if (dados.length == 4) {
-                    String nome = dados[0];
-                    String idade = dados[1];
-                    String departamento = dados[2];
-                    String salario = dados[3];
 
-                    System.out.println(labelNome + ": " + nome);
-                    System.out.println(labelIdade + ": " + idade);
-                    System.out.println(labelDepto + ": " + departamento);
-                    System.out.println(labelSalario + ": " + salario);
-                    System.out.println("------------------------");
-                }
+                String nome = dados[0];
+                String idade = dados[1];
+                String departamento = dados[2];
+                String salario = dados[3];
+
+                System.out.println(labelNome + ": " + nome);
+                System.out.println(labelIdade + ": " + idade);
+                System.out.println(labelDepto + ": " + departamento);
+                System.out.println(labelSalario + ": " + salario);
+                System.out.println("------------------------");
+
             }
         } catch (IOException e) {
             System.out.println("Erro ");
