@@ -43,9 +43,10 @@ public class Estoque {
     }
 
     public void adicionarProduto(String nome, int quantidade, double preco) {
-        int novoId = produtos.size()+1;
-        System.out.println("novoid = " + novoId);
-        produtos.add(new Produto(novoId, nome, quantidade, preco));
+        Produto p = produtos.stream()
+                .max(Comparator.comparingInt(Produto::getId))
+                .orElse(null);
+        produtos.add(new Produto(p.getId()+1, nome, quantidade, preco));
         salvarEstoque();
     }
 
