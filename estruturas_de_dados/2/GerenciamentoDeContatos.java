@@ -17,7 +17,7 @@ public class GerenciamentoDeContatos {
 
         Contato contato = contatos.get(nome);
         if (contato != null) {
-            System.out.println("Erro: Contato com nome "+ nome +" já existe!");
+            System.out.println("Erro: Contato com nome "+ nome +" já existe!\n");
         } else {
             Contato contatoNovo = new Contato();
             contatoNovo.adicionarTelefone(telefone);
@@ -42,7 +42,7 @@ public class GerenciamentoDeContatos {
     public void buscarContato(String nome) {
         Contato contato = contatos.get(nome);
         if (contato != null) {
-            System.out.println("Nome: " + nome);
+            System.out.println("Contato encontrado: " + nome);
             contato.exibirContato();
         } else {
             System.out.println("Contato não encontrado.");
