@@ -78,22 +78,22 @@ public class GerenciamentoDeContatos {
 
 
         // Buscando um contato
-        System.out.println("\nBuscando contato 'Maria':");
+        System.out.println("\n\nBuscando contato 'Maria':");
         gestao.buscarContato("Maria");
 
 
         // Removendo um contato
-        System.out.println("\nRemovendo contato 'Carlos':");
+        System.out.println("\n\nRemovendo contato 'Carlos':");
         gestao.removerContato("Carlos");
 
 
         // Tentando remover um contato inexistente
-        System.out.println("\nTentando remover contato 'João' que não existe:");
+        System.out.println("\n\nTentando remover contato 'João' que não existe:");
         gestao.removerContato("João");
 
 
         // Exibindo todos os contatos após remoções
-        System.out.println("\nExibindo todos os contatos após remoções:");
+        System.out.println("\n\nExibindo todos os contatos após remoções:");
         gestao.exibirContatos();
     }
 }
