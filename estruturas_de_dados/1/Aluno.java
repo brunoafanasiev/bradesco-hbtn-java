@@ -11,4 +11,8 @@ public class Aluno {
         return nome;
     }
 
+    @Override
+    public String toString() {
+        return "Nome: " + nome + " | Idade: " + idade;
+    }
 }
