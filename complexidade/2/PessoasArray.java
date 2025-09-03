@@ -23,7 +23,7 @@ public class PessoasArray {
         int inicio = 0;
         int fim = nomes.length - 1;
 
-        System.out.println("Procurando pelo nome: \"" + nome + "\"");
+        System.out.println("Procurando o nome: \"" + nome + "\"");
 
         while (inicio <= fim) {
             int meio = (inicio + fim) / 2;
