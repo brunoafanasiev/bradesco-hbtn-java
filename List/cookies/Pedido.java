@@ -6,7 +6,7 @@ public class Pedido {
     private List<PedidoCookie> cookies;
 
     public Pedido() {
-        cookies = new ArrayList<>();
+        cookies = new ArrayList<PedidoCookie>();
     }
 
     public void adicionarPedidoCookie(PedidoCookie pedido) {
