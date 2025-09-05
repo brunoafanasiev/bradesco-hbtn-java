@@ -24,7 +24,7 @@ public class FileWritingExercise {
                 writer.write(linha);
                 writer.newLine();
             }
-            
+
         } catch (IOException e) {
             System.out.println("Erro ao criar ou escrever no arquivo");
         }
