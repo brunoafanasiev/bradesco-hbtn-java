@@ -64,7 +64,14 @@ public class Blog {
         for (Post p : postagens) {
             mapa.computeIfAbsent(p.getCategoria(), k -> new TreeSet<>()).add(p);
         }
-        return mapa;
+        return mapa.entrySet().stream()
+                .sorted((e1, e2) -> Integer.compare(e2.getValue().size(), e1.getValue().size()))
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (e1, e2) -> e1,
+                        LinkedHashMap::new
+                ));
     }
 
     public Map<Autor, Set<Post>> obterTodosPostsPorAutor() {
