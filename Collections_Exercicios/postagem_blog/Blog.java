@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Blog {
     private Set<Post> postagens;
@@ -28,7 +29,14 @@ public class Blog {
             Categorias cat = p.getCategoria();
             contagem.put(cat, contagem.getOrDefault(cat, 0) + 1);
         }
-        return contagem;
+        return contagem.entrySet().stream()
+                .sorted((e1, e2) -> Integer.compare(e2.getValue(), e1.getValue()))
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (e1, e2) -> e1,
+                        LinkedHashMap::new
+                ));
     }
 
     public Set<Post> obterPostsPorAutor(Autor autor) {
