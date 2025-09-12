@@ -19,7 +19,7 @@ public class Pessoa implements Comparable<Pessoa> {
 
     @Override
     public String toString() {
-        String formatado = String.format("%f", salario).replace('.', ',');
+        String formatado = String.format("%f", salario).replace(',', '.');
         return String.format("[%s] %s %s %d R$ %s", codigo, nome, cargo, idade, formatado);
     }
 
