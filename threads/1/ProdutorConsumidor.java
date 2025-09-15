@@ -5,7 +5,7 @@ public class ProdutorConsumidor {
         Produtor produtor = new Produtor(buffer);
         Consumidor consumidor = new Consumidor(buffer);
 
-        produtor.run();
-        consumidor.run();
+        produtor.start();
+        consumidor.start();
     }
 }
