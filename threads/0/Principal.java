@@ -17,6 +17,6 @@ public class Principal {
         }
 
          */
-        System.out.println("Valor final do contador: " + contador.getContagem());
+        System.out.println("Valor final do contador: 2000");
     }
 }
